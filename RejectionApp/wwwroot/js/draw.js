@@ -10,29 +10,30 @@
             let ctx = canvas.getContext('2d');
             
             // Settings
-            ctx.font = "32px sans-serif";
+            ctx.font = "50px sans-serif";
             ctx.lineCup = "round";
-            ctx.lineWidth = 3;            
+            ctx.lineWidth = 5;            
             //
 
             // Axis 
-            let offsetLine = 10;
-            let offsetFont = 64;
+            let offsetLine = 18;
+            let offsetFont = 90;
             ctx.strokeStyle = 'rgb(77, 77, 77)';
             ctx.moveTo(drawParam.Offset, changeY(0));
             ctx.lineTo(drawParam.Width - drawParam.Offset, changeY(0));
             ctx.moveTo(drawParam.Offset, drawParam.Offset);
             ctx.lineTo(drawParam.Offset, drawParam.Height - drawParam.Offset);
             ctx.lineWidth = 4;
-            for(let x = drawParam.xMinimum; x <= drawParam.xMaximum; x++){
+            let deltaX = Math.abs(drawParam.xMaximum - drawParam.xMinimum) / 10;
+            for(let x = drawParam.xMinimum; x <= drawParam.xMaximum + deltaX/2; x += deltaX){
                 ctx.moveTo(changeX(x), changeY(0) - offsetLine);
                 ctx.lineTo(changeX(x), changeY(0) + offsetLine);
-                ctx.fillText(x, changeX(x) - 6, changeY(0) + offsetFont - offsetLine);
+                ctx.fillText(x.toFixed(1), changeX(x) - offsetLine*2, changeY(0) + offsetFont - offsetLine);
             }
-            for(let y = drawParam.yMinimum + 0.1; y <= drawParam.yMaximum; y+= 0.1){
+            for(let y = drawParam.yMinimum; y <= drawParam.yMaximum; y+= drawParam.yMaximum / 10){
                 ctx.moveTo(drawParam.Offset - offsetLine, changeY(y));
                 ctx.lineTo(drawParam.Offset + offsetLine, changeY(y));
-                ctx.fillText(y.toFixed(1), drawParam.Offset - offsetFont, changeY(y) + offsetLine);
+                ctx.fillText(y.toFixed(1), drawParam.Offset - offsetFont - offsetLine, changeY(y) + offsetLine);
             }
             
             //

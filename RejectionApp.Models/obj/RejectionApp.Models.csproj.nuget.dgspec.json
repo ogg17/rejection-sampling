@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\RejectionApp.Models.csproj": {}
+    "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\RejectionApp.Models.csproj": {
+    "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\RejectionApp.Models.csproj",
+        "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
         "projectName": "RejectionApp.Models",
-        "projectPath": "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\RejectionApp.Models.csproj",
+        "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
         "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\obj\\",
+        "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",

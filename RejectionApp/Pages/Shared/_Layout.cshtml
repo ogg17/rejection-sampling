@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - RejectionApp</title>
+    <title class="col">@ViewData["Title"] - RejectionApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap-5.0.1-dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
 </head>
@@ -11,7 +11,13 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">RejectionApp</a>
+            
+                    <div class="d-inline-flex">
+                        <img src="favicon.ico" class="p-2" width="40" height="40" />
+                        <a class="navbar-brand col" asp-area="" asp-page="/Index">Rejection App</a>
+                    </div>
+                
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +35,7 @@
         </div>
     </nav>
 </header>
-<div class="container h-100">
+<div class="container-sm">
     @RenderBody()
 </div>
 

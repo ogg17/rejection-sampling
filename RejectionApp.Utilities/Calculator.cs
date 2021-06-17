@@ -178,6 +178,8 @@ namespace RejectionApp.Utilities
                 if (x <= myResult.Functions[i].Less && x >= myResult.Functions[i].Great)
                     density = myResult.C * PerformFunction(myResult.Functions[i].Value, x);
             }
+
+            //if (density > 1.0) density = double.NaN;
             
             return density;
         }
@@ -205,11 +207,11 @@ namespace RejectionApp.Utilities
             return c;
         }
 
-        public static List<double> GenerateSampling(Models.Result myResult, double accuracy)
+        public static List<double> GenerateSampling(Models.Result myResult, double accuracy, double maximum)
         {
             var sampling = new List<double>();
             var random = new Random();
-            double M = PerformDensity(myResult, FindMaximum(myResult, accuracy));
+            double M = PerformDensity(myResult, maximum);
 
             double eps;
             double n;

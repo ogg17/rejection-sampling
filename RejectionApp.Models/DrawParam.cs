@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace RejectionApp.Models
 {
@@ -24,10 +25,11 @@ namespace RejectionApp.Models
             return (Height - 2 * Offset) * (-varY + yMaximum) / (yMaximum - yMinimum) + Offset;
         }
 
-        public void UpdateParam(Models.Result myResult)
+        public void UpdateParam(Models.Result myResult, int max)
         {
             xMinimum = myResult.A;
             xMaximum = myResult.B;
+            yMaximum = max+1;
         }
     }
 }

@@ -27,7 +27,9 @@ namespace RejectionApp.Models
                 if (function.Great < a) a = (int)function.Great;
                 if (function.Less > b) b = (int)function.Less;
             }
-
+            
+            if(Math.Abs(b-a) < 1) throw new Exception("Invalid interval!");
+            
             A = a;
             B = b;
         }

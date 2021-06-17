@@ -29,16 +29,17 @@ namespace RejectionApp.Pages
                 MyResult = myResult;
                 myResult.C = Calculator.FindNormal(myResult, myResult.Accuracy);
                 myResult.SetInterval();
+                myResult.Maximum = Calculator.FindMaximum(myResult, myResult.Accuracy);
 
-                var sampling = Calculator.GenerateSampling(myResult, myResult.Accuracy);
+                var sampling = Calculator.GenerateSampling(myResult, myResult.Accuracy, MyResult.Maximum);
                 Sampling = sampling;
                 using (var chacheEntry = _cache.CreateEntry("Sampling"))
                 {
                     _cache.Set("SamplingValue", sampling);
                 }
                 
-                MyDrawParam.UpdateParam(myResult);
-                MyDrawParam.Offset = 100;
+                MyDrawParam.UpdateParam(myResult, (int)MathF.Ceiling((float)Calculator.PerformDensity(myResult, myResult.Maximum)));
+                MyDrawParam.Offset = 150;
                 
                 TempData.Put("MyDrawParam", MyDrawParam);
                 TempData.Put("MyResult", myResult);
@@ -64,7 +65,7 @@ namespace RejectionApp.Pages
                 if (myDrawParam == null)
                 {
                     myDrawParam = new DrawParam();
-                    myDrawParam.UpdateParam(result);
+                    myDrawParam.UpdateParam(result, (int)MathF.Ceiling((float)Calculator.PerformDensity(result, result.Maximum)));
                 }
 
                 var sampling = new List<double>();

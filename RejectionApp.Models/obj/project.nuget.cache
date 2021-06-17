@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JvHUoRLc+qPb8sdgFZApE/La4mAR5sGZWiZ7jwoVvBBrUaGPaUJ8LTjnsgKTX0cROhqy27xC2T3bywukdJMMhA==",
+  "dgSpecHash": "ZbAviIu7x7gTxcOS5orOO319OR+Rf56IcwAlTrBI0n1EflArN2l+LCv29ctD+BoHEREBBXriKs+KsGgt22eBtg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\C#\\RejectionApp\\RejectionApp.Models\\RejectionApp.Models.csproj",
+  "projectFilePath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

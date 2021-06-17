@@ -1,0 +1,55 @@
+﻿@page
+@model RejectionApp.Pages.Result
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<div class="text-center align-content-center">
+    <div class="my-auto row">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        <h2>Histogram</h2>
+        <table class="table table-borderless mt-3">
+            @for (var i = 0; i < Model.MyResult.Functions.Count; i++)
+            {
+                <tr>
+                    <td class="fw-bold fs-4">
+                        p(x) = @Model.MyResult.Functions[i].Value,
+                        @Model.MyResult.Functions[i].Great &le; x
+                        @(i == Model.MyResult.Functions.Count - 1 ? "\u2264" : "\u003C")
+                        @Model.MyResult.Functions[i].Less
+                    </td>
+                </tr>
+            }
+
+            <tr>
+                <td class="fw-bold fs-4">0, otherwise</td>
+            </tr>
+
+        </table>
+        <canvas class="d-flex flex-column" id="canvas" width="@Model.MyDrawParam.Width" height="@Model.MyDrawParam.Height">Distribution Grath</canvas>
+        <div class="overflow-auto">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>&xi;</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @for (var i = 0; i < Model.Sampling.Count; i++)
+                {
+                    <tr>
+                        <th>@(i + 1)</th>
+                        <td>@Model.Sampling[i].ToString($"F{Model.MyResult.Accuracy}")</td>
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/draw.js"></script>

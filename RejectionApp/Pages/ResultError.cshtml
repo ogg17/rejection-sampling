@@ -1,0 +1,16 @@
+﻿@page
+@model RejectionApp.Pages.ResultError
+
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="d-flex justify-content-center h-75 text-center">
+    <div class="my-auto">
+        <div class="">
+            <img class="mb-5" src="/Error.png" alt="Error" asp-append-version="true">
+            <a class="display-3">@ViewData["Title"]</a>
+        </div>
+        <h3 class="">@Model.ExMessage</h3>
+        <a class="btn btn-primary mt-5" asp-area="" asp-page="/Index">Main Page</a>
+    </div>
+</div>

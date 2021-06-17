@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RejectionApp.Services/1.0.0": {
+        "dependencies": {
+          "RejectionApp.Models": "1.0.0"
+        },
+        "runtime": {
+          "RejectionApp.Services.dll": {}
+        }
+      },
+      "RejectionApp.Models/1.0.0": {
+        "runtime": {
+          "RejectionApp.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RejectionApp.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RejectionApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

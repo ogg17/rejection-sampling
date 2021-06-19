@@ -75,7 +75,7 @@ namespace RejectionApp.Pages
                 }
 
                 var drawFunctionPoints = DrawPlots.DrawGraph(myDrawParam, result);
-                var frequencies = Calculator.calculateFrequencies(result, myDrawParam, result.IntervalCount, sampling);
+                var frequencies = Calculator.CalculateFrequencies(result, myDrawParam, result.IntervalCount, sampling);
                 var drawFuncHistRects = DrawPlots.DrawHistogram(myDrawParam, result.IntervalCount, frequencies, result.SampleSize);
 
                 var jsonStr = JsonSerializer.Serialize(new

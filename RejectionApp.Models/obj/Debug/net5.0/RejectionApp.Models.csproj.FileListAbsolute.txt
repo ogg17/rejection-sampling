@@ -22,3 +22,15 @@ C:\Projects\Web\rejection-app\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.
 C:\Projects\Web\rejection-app\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.dll
 C:\Projects\Web\rejection-app\RejectionApp.Models\obj\Debug\net5.0\ref\RejectionApp.Models.dll
 C:\Projects\Web\rejection-app\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.pdb
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\bin\Debug\net5.0\RejectionApp.Models.deps.json
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\bin\Debug\net5.0\RejectionApp.Models.dll
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\bin\Debug\net5.0\ref\RejectionApp.Models.dll
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\bin\Debug\net5.0\RejectionApp.Models.pdb
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.csproj.AssemblyReference.cache
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.AssemblyInfoInputs.cache
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.AssemblyInfo.cs
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.csproj.CoreCompileInputs.cache
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.dll
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\ref\RejectionApp.Models.dll
+P:\Projects\Web\rejection-sampling\RejectionApp.Models\obj\Debug\net5.0\RejectionApp.Models.pdb

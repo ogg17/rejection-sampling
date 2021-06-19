@@ -29,7 +29,7 @@ namespace RejectionApp.Models
         {
             xMinimum = myResult.A;
             xMaximum = myResult.B;
-            yMaximum = max+1;
+            yMaximum = max;
         }
     }
 }

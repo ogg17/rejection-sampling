@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Web\\rejection-app\\RejectionApp\\RejectionApp.csproj": {}
+    "P:\\Projects\\Web\\rejection-sampling\\RejectionApp\\RejectionApp.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj": {
+    "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
+        "projectUniqueName": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj",
         "projectName": "RejectionApp.Models",
-        "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
+        "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj",
         "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\obj\\",
+        "outputPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj": {
+    "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj",
+        "projectUniqueName": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj",
         "projectName": "RejectionApp.Services",
-        "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj",
+        "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj",
         "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\obj\\",
+        "outputPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj": {
-                "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj"
+              "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj": {
+                "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj": {
+    "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj",
+        "projectUniqueName": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj",
         "projectName": "RejectionApp.Utilities",
-        "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj",
+        "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj",
         "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\obj\\",
+        "outputPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,8 +140,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj": {
-                "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj"
+              "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj": {
+                "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj"
               }
             }
           }
@@ -183,14 +183,14 @@
         }
       }
     },
-    "C:\\Projects\\Web\\rejection-app\\RejectionApp\\RejectionApp.csproj": {
+    "P:\\Projects\\Web\\rejection-sampling\\RejectionApp\\RejectionApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp\\RejectionApp.csproj",
+        "projectUniqueName": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp\\RejectionApp.csproj",
         "projectName": "RejectionApp",
-        "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp\\RejectionApp.csproj",
+        "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp\\RejectionApp.csproj",
         "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp\\obj\\",
+        "outputPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -207,11 +207,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj": {
-                "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj"
+              "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj": {
+                "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj"
               },
-              "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj": {
-                "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj"
+              "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj": {
+                "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Utilities\\RejectionApp.Utilities.csproj"
               }
             }
           }

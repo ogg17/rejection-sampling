@@ -281,7 +281,7 @@ namespace RejectionApp.Utilities
             return maximum;
         }
 
-        public static List<int> calculateFrequencies(Result myResult, DrawParam myParam, int intervalsCount, List<double> sampling)
+        public static List<int> CalculateFrequencies(Result myResult, DrawParam myParam, int intervalsCount, List<double> sampling)
         {
             if (myResult.SampleSize == 0)
                 return null;

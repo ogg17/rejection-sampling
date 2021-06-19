@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9O938T94hSoQI3NNtfBEIGrLKoV3q2cHJlMJnniaIGozL3DhvZArrqB+vI1TmplHnRyiySyG5CRPcsbnt1i9HA==",
+  "dgSpecHash": "TS3q9YPsFWeo20c9IzhNNC+6NsCz3142L/3V2eWKY3Uq7W46XvhLPxdwEvWDokX6m8CGyZ2jAxzdrFfux/Z70A==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Services\\RejectionApp.Services.csproj",
+  "projectFilePath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Services\\RejectionApp.Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

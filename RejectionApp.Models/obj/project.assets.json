@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
+      "projectUniqueName": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj",
       "projectName": "RejectionApp.Models",
-      "projectPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\RejectionApp.Models.csproj",
+      "projectPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\RejectionApp.Models.csproj",
       "packagesPath": "C:\\Users\\sewa2\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Web\\rejection-app\\RejectionApp.Models\\obj\\",
+      "outputPath": "P:\\Projects\\Web\\rejection-sampling\\RejectionApp.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sewa2\\AppData\\Roaming\\NuGet\\NuGet.Config",

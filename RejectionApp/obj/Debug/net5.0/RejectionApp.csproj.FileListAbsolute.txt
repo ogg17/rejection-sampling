@@ -1105,3 +1105,4 @@ P:\Projects\Web\rejection-sampling\RejectionApp\obj\Debug\net5.0\RejectionApp.dl
 P:\Projects\Web\rejection-sampling\RejectionApp\obj\Debug\net5.0\ref\RejectionApp.dll
 P:\Projects\Web\rejection-sampling\RejectionApp\obj\Debug\net5.0\RejectionApp.pdb
 P:\Projects\Web\rejection-sampling\RejectionApp\obj\Debug\net5.0\RejectionApp.genruntimeconfig.cache
+P:\Projects\Web\rejection-sampling\RejectionApp\bin\Debug\net5.0\MathNet.Numerics.dll

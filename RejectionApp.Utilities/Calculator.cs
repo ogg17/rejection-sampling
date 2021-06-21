@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using MathNet.Numerics;
 using RejectionApp.Models;
 
 namespace RejectionApp.Utilities
@@ -160,58 +161,44 @@ namespace RejectionApp.Utilities
 
         public static double PerformFunction(string equals, double x)
         {
+            var result = 0.0;
             if (equals == _functionStr)
-                return PerformFunctionRpn(_functionStrRpn, x);
+            {
+                result = PerformFunctionRpn(_functionStrRpn, x);
+                return result;
+            }
 
             _functionStr = equals;
             _functionStrRpn = TranslateToRpn(equals);
-
-            return PerformFunctionRpn(_functionStrRpn, x);
+            
+            result = PerformFunctionRpn(_functionStrRpn, x);
+            return result;
         }
 
         public static double PerformDensity(Models.Result myResult, double x)
         {
-            double density = float.NaN;
-            
-            for (int i = 0; i < myResult.Functions.Count; i++)
-            {
-                if (x <= myResult.Functions[i].Less && x >= myResult.Functions[i].Great)
-                    density = myResult.C * PerformFunction(myResult.Functions[i].Value, x);
-            }
-
-            //if (density > 1.0) density = double.NaN;
-            
-            return density;
-        }
-
-        public static double FindNormal(Models.Result myResult, double accuracy)
-        {
-            var n = Math.Pow(10, accuracy);
-
-            var result = 0.0;
-
             foreach (var function in myResult.Functions)
             {
-                var h = (function.Less - function.Great) / n;
-                double sum = (PerformDensity(myResult, function.Great) + PerformDensity(myResult, function.Less)) / 2;
-                for (var i = 1; i < n; i++)
+                if (x <= function.Less + Math.Pow(10, -myResult.Accuracy - 1) && x >= function.Great)
                 {
-                    var x = function.Great + h * i;
-                    sum += PerformDensity(myResult, x);
+                    var density = myResult.C * PerformFunction(function.Value, x);
+                    return density;
                 }
-                result += h * sum;
             }
-
-            double c = 1/result;
-            
-            return c;
+            return 0.0;
         }
 
-        public static List<double> GenerateSampling(Models.Result myResult, double accuracy, double maximum)
+        public static double FindNormal(Models.Result myResult)
+        {
+            var integ = IntegrateDensity(myResult, myResult.A, myResult.B);
+            return 1 / integ;
+        }
+
+        public static List<double> GenerateSampling(Models.Result myResult)
         {
             var sampling = new List<double>();
             var random = new Random();
-            double M = PerformDensity(myResult, maximum);
+            double M = PerformDensity(myResult, myResult.Maximum);
 
             double eps;
             double n;
@@ -229,11 +216,11 @@ namespace RejectionApp.Utilities
             return sampling;
         }
 
-        public static double FindMaximum(Models.Result myResult, double accuracy)
+        public static double FindMaximum(Models.Result myResult)
         {
             var maximum = 0.0;
             var perfMaximum = 0.0;
-            accuracy = 1 / Math.Pow(10, accuracy);
+            var accuracy = Math.Pow(10, -myResult.Accuracy);
 
             double a;
             double b;
@@ -242,7 +229,7 @@ namespace RejectionApp.Utilities
                 a = function.Great;
                 b = function.Less;
 
-                for (var x = a; x <= b; x += accuracy)
+                for (var x = a; x < b + accuracy/2; x += accuracy)
                 {
                     var f = PerformFunction(function.Value, x);
                     if (f < 0)
@@ -281,22 +268,105 @@ namespace RejectionApp.Utilities
             return maximum;
         }
 
-        public static List<int> CalculateFrequencies(Result myResult, DrawParam myParam, int intervalsCount, List<double> sampling)
+        public static List<int> CalculateFrequencies(Result myResult, List<double> sampling)
         {
             if (myResult.SampleSize == 0)
                 return null;
-            else
+            
+            var frequency = new int[myResult.IntervalCount];
+
+            foreach (var value in sampling)
             {
-                var frequency = new int[intervalsCount];
-
-                foreach (var value in sampling)
-                {
-                    int index = (int)((value - myResult.A) / (myResult.B - myResult.A) * intervalsCount);
-                    ++frequency[index];
-                }
-
-                return frequency.ToList();
+                int index = (int)((value - myResult.A) / (myResult.B - myResult.A) * myResult.IntervalCount);
+                ++frequency[index];
             }
+
+            return frequency.ToList();
+        }
+        
+        public static List<double> СalculateProbabilities(Result myResult, DrawParam myParam)
+        {
+            var probability = new List<double>();
+
+            double length = (myResult.B - myResult.A) / (double)myResult.IntervalCount;
+
+            for (double x = myParam.xMinimum; x < myParam.xMaximum - length/2; x += length)
+            {
+                double Px = IntegrateDensity(myResult, x, x+length);
+                probability.Add(Px);
+            }
+
+            return probability;
+        }
+        
+        public static double CalculateX2(Result myResult, List<double> probability, List<int> frequency)
+        {
+            double x2Statistics;
+            
+            if (frequency == null || probability == null || frequency.Count == 0 || frequency.Count != probability.Count)
+            {
+                x2Statistics = 0;
+                return x2Statistics;
+            }
+
+            double num1 = 0.0;
+
+            for (int i = 0; i < myResult.IntervalCount; i++)
+            {
+                double num2 = (double)frequency[i] / myResult.SampleSize - probability[i];
+                num1 += num2 * num2 / probability[i];
+            }
+            x2Statistics = num1 * myResult.SampleSize;
+            
+            return x2Statistics;
+        }
+        
+        public static double SignificanceLevelXi2(Result myResult, double xi2, int intervalsCount)
+        {
+            // if (xi2 <= 0.0) return 1.0;
+            //
+            // int num1 = intervalsCount / 2;
+            // double num2 = xi2 / 2.0;
+            // double num3 = 1.0;
+            // double num4 = num3;
+            //
+            // for (int index = 1; index < num1; ++index)
+            // {
+            //     num3 = num3 * num2 / (double)index;
+            //     num4 += num3;
+            // }
+            //
+            // return num4 * Math.Exp(-num2);
+            double result = 0;
+            var k = intervalsCount - 1;
+            var x = xi2;
+            if (intervalsCount % 2 != 0)
+                result = 1 - SpecialFunctions.GammaLowerIncomplete(k/2.0, x/2)/SpecialFunctions.Gamma(k/2.0);
+            else 
+                result = 1 - MathNet.Numerics.Integration.SimpsonRule.IntegrateComposite(xx => Math.Pow(0.5, k / 2.0)*
+                    Math.Pow(xx, k/2.0 - 1)*
+                    Math.Exp(-xx/2)/SpecialFunctions.Gamma(k/2.0), 
+                    0.0, x, (int)Math.Pow(10, myResult.Accuracy));
+
+            return result;
+        }
+        
+        public static double IntegrateDensity(Result myResult, double a, double b)
+        {
+            var n = Math.Pow(10, myResult.Accuracy);
+            var result = 0.0;
+
+            
+            var h = (b - a) / n;
+            double sum = 0;
+            for (var i = 0; i < n; i++)
+            {
+                var x = a + h * (i + 0.5);
+                sum += PerformDensity(myResult, x);
+            }
+            result = h * sum;
+            
+            return result;
         }
     }
 }

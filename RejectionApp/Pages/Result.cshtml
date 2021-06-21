@@ -9,7 +9,7 @@
     <div class="row d-sm-flex">
         <h1 class="display-4">@ViewData["Title"]</h1>
         <h2>Histogram</h2>
-        <table class="d-sm-table table-borderless mt-3">
+        <table class="d-sm-table table-borderless my-3 border-bottom">
             @for (var i = 0; i < Model.MyResult.Functions.Count; i++)
             {
                 <tr>
@@ -27,6 +27,8 @@
             </tr>
 
         </table>
+        <p class="math fs-3 mb-0">X&sup2; = @Model.Xi2.ToString($"F{Model.MyResult.Accuracy}")</p>
+        <p class="math fs-3 border-bottom">P(&chi;&sup2; &geqslant; X&sup2;) = @Model.SignficatiobLevel.ToString($"F{(Model.MyResult.Accuracy<2?2:Model.MyResult.Accuracy)}")</p>
         <canvas class="d-sm-flex flex-column p-1" id="canvas" width="@Model.MyDrawParam.Width" height="@Model.MyDrawParam.Height">Distribution Grath</canvas>
         <div class="overflow-auto">
             <table class="table table-bordered">

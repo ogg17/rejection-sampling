@@ -7,6 +7,10 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+p.math{
+  font-family: "Cambria Math", sans-serif;
+}
+
 /* Provide sufficient contrast against white background */
 
 .btn-primary {

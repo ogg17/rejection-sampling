@@ -1,11 +1,10 @@
 ﻿function draw() {
     let canvas = document.getElementById('canvas');
     if (canvas.getContext) {
-        $.get('/result', {handler: 'graph'}, function (data){            
+        $.get('/result', {handler: 'graph'}, function (data){   
+                       
             let drawRoot = JSON.parse(data);
-            let drawParam = drawRoot.drawParam;
-            
-            console.log(drawRoot);
+            let drawParam = drawRoot.drawParam;          
             
             let ctx = canvas.getContext('2d');
             

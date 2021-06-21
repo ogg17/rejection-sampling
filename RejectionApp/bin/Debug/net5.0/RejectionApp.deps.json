@@ -328,6 +328,17 @@
           "RejectionApp.dll": {}
         }
       },
+      "MathNet.Numerics/4.15.0": {
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {
+            "assemblyVersion": "4.15.0.0",
+            "fileVersion": "4.15.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/5.0.7": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -635,6 +646,7 @@
       },
       "RejectionApp.Utilities/1.0.0": {
         "dependencies": {
+          "MathNet.Numerics": "4.15.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.7",
           "RejectionApp.Models": "1.0.0"
         },
@@ -2350,6 +2362,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MathNet.Numerics/4.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cP4QgPPiU7boMyL8npvuQyVGVYUd/JQY1AWa+Wl2f//fuJN40qwt9ABRazunZIcDLHg3SSlgD/e+3Lnp69jNTg==",
+      "path": "mathnet.numerics/4.15.0",
+      "hashPath": "mathnet.numerics.4.15.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/5.0.7": {
       "type": "package",
